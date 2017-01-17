@@ -7,7 +7,6 @@ require 'log4r/yamlconfigurator'
 require 'log4r/outputter/datefileoutputter'
 include Log4r
 Bundler.require(*Rails.groups)
-
 module Controller
   class Application < Rails::Application
     log4r_config= YAML.load_file(File.join(File.dirname(__FILE__),"log4r.yml"))

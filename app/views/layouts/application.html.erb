@@ -65,15 +65,15 @@
             <a href="#"><i class="fa fa-user fa-lg"></i> 教师管理<span class="arrow"></span></a>
           </li>
           <ul class="sub-menu collapse in <%=yield(:zhidaoyuan_ul)%>" id="teac">
-            <li class="<%=yield(:shenqinglist_li)%>"><a href="<%= %>">首次申请受理</a></li>
-            <li class="<%=yield(:zaoce_li)%>"><a href="<%= %>">首次登记受理</a></li>
+            <li class="<%=yield(:shenqinglist_li)%>"><a href="<%= teachers_path %>">首次申请受理</a></li>
+            <li class="<%=yield(:zaoce_li)%>"><a href="<%= new_teacher_path %>">首次登记受理</a></li>
           </ul>
 
-          <li data-toggle="collapse" data-target="#std" class="collapsed <%=yield(:jinsheng_li)%>">
+          <li data-toggle="collapse" data-target="#std" class="collapsed <%=yield(:student_li)%>">
             <a href="#"><i class="fa fa-globe fa-lg"></i> 学员管理<span class="arrow"></span></a>
           </li>
           <ul class="sub-menu collapse in <%=yield(:student_ul)%>" id="std">
-                <li class="<%=yield(:student_list_li)%>"><a href="<%= %>">学员列表</a></li>
+                <li class="<%=yield(:student_list_li)%>"><a href="<%= students_path %>">学员列表</a></li>
                 <li class="<%=yield(:new_student_list_li)%>"><a href="<%= %>">新建学员</a></li>
           </ul>
 
@@ -89,7 +89,7 @@
     </div>
 
     <div class="" style="margin-left: 0px; width: 1369px;">
-      <div class="" style="z-index: 999; padding-left: 215px; position: absolute; width: 100%; top: 90px;">
+      <div class="" style="z-index: 999; padding-left: 215px; margin-top: 40px; width: 100%; top: 90px;">
           <% if current_user.present? %>
               <div class="locbar navbar-fixed-top"  id="location" style="top: 70px; left: 210px; background: #e9e9e9; min-width: 800px;">
                 您现在的位置：<%= yield :locbar %>
@@ -107,9 +107,6 @@
 <% else %>
     <%= yield%>
 <% end %>
-<!-- 全局弹出层 -->
-<div id="modal-ajax" class="modal hide fade" tabindex="-1"></div>
-</div>
 </body>
 </html>
 <style>

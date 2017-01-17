@@ -28,7 +28,6 @@
   overflow: scroll;
 }
 .navbar {
-  position: fixed;
   width: 100%;
   height: 70px;
   margin-bottom: 0px;
