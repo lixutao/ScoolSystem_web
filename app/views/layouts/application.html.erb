@@ -57,7 +57,7 @@
         <ul id="menu-content" class="menu-content collapse out">
           <li>
             <a href="#">
-              <i class="fa fa-user fa-lg"></i> 查找指导员
+              <i class="fa fa-user fa-lg"></i> 学校管理系统
             </a>
           </li>
 
@@ -65,8 +65,8 @@
             <a href="#"><i class="fa fa-user fa-lg"></i> 教师管理<span class="arrow"></span></a>
           </li>
           <ul class="sub-menu collapse in <%=yield(:zhidaoyuan_ul)%>" id="teac">
-            <li class="<%=yield(:shenqinglist_li)%>"><a href="<%= teachers_path %>">首次申请受理</a></li>
-            <li class="<%=yield(:zaoce_li)%>"><a href="<%= new_teacher_path %>">首次登记受理</a></li>
+            <li class="<%=yield(:shenqinglist_li)%>"><a href="<%= teachers_path %>"> 教师列表</a></li>
+            <li class="<%=yield(:zaoce_li)%>"><a href="<%= new_teacher_path %>"> 新建教师</a></li>
           </ul>
 
           <li data-toggle="collapse" data-target="#std" class="collapsed <%=yield(:student_li)%>">
@@ -81,8 +81,7 @@
             <a href="#"><i class="fa fa-car fa-lg"></i> 课程管理<span class="arrow"></span></a>
           </li>
           <ul class="sub-menu collapse in <%=yield(:qianzhi_ul)%>" id="cor">
-            <li class="<%= yield(:qianchu_li)%>"><a href="<%= %>">迁出审批</a></li>
-            <li class="<%= yield(:qianru_li)%>"><a href="<%= %>">迁入审批</a></li>
+            <li class="<%= yield(:qianchu_li)%>"><a href="<%= %>"> 课程列表</a></li>
           </ul>
         </ul>
       </div>

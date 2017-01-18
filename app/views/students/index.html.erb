@@ -9,6 +9,7 @@
   </thead>
 
   <tbody>
+    <% if @students.present? %>
     <% @students.each do |student| %>
       <tr>
         <td><%= student.name %></td>
@@ -17,6 +18,11 @@
         <td><%= link_to '查看', student %></td>
         <td><%= link_to '编辑', edit_student_path(student) %></td>
         <td><%= link_to '删除', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <% else %>
+      <tr class="nodata">
+        <td colspan="4">暂无数据.</td>
       </tr>
     <% end %>
   </tbody>
